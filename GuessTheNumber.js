@@ -2,16 +2,19 @@ let num =   Math.floor(Math.random() * 101);
 let score = 100;
 let input;
 
-while(input != num){
+do{
     input = prompt("Enter your Number : ");
     input = Number.parseInt(input)
     if(input > num){
         alert("Entered number greater than original Number")
     }
-    else{
+    else if(input < num){
         alert("Entered number smaller than original Number")
     }
+    else{
+        alert("Yup!! You guessed the Correct Number : " + num)
+    }
     score--
-}
+}while(input != num)
 
-console.log("Score : " + score)
+confirm("Score : " + score)
